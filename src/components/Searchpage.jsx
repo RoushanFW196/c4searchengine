@@ -1,6 +1,6 @@
 
 import React, { useState,useEffect } from 'react'
-
+import "./searchpage.css";
 
 export const Seacrhpage=()=>{
 
@@ -50,7 +50,7 @@ export const Seacrhpage=()=>{
                     return(
                         <div key={e.id} className="each-data">
                        <p>{e.url}</p>
-                      <p>{e.title} | {e.author}</p>
+                      <p className="titleclr">{e.title} | {e.author}</p>
                        <p>{e.description}</p>
                        <p>Creation Date:{e.creation_date}</p>
                        <p>Explicit:{e.explicit==true?"NO":"YES"} Quality %: {e.quality}</p>

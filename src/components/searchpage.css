@@ -1,1 +1,21 @@
 
+.each-data{
+    width: 800px;
+    height:200px;
+    background-color:aliceblue;
+    text-align:left;
+    padding-left:100px;
+    padding-bottom: 0px;
+    margin:10px;
+}
+.titleclr{
+    color:blue;
+}
+.each-data p{
+    margin:0;
+    padding:0;
+}
+.search-box{
+    width: 500px;
+    border-radius: 20px;
+}
