@@ -1,8 +1,26 @@
 
-import React, { PureComponent } from 'react'
+import React, { useState,useEffect } from 'react'
 
 
 export const Seacrhpage=()=>{
+
+    const[data,setData]=useState([])
+     console.log(data)
+
+     useEffect(()=>{
+      
+       getData();
+    },[])
+
+
+    const getData=()=>{
+        fetch("https://fast-reef-22226.herokuapp.com/data").then((d)=>d.json()).then((res)=>setData(res))
+    }
+
+
+
+
+
 
     return(
         <div>
@@ -28,7 +46,19 @@ export const Seacrhpage=()=>{
             </div>
 
             <div className="search-results">
-               
+                {data.map((e)=>{
+                    return(
+                        <div key={e.id} className="each-data">
+                       <p>{e.url}</p>
+                      <p>{e.title} | {e.author}</p>
+                       <p>{e.description}</p>
+                       <p>Creation Date:{e.creation_date}</p>
+                       <p>Explicit:{e.explicit==true?"NO":"YES"} Quality %: {e.quality}</p>
+                    
+                        </div>
+                    )
+
+                })}
             </div>
         </div>
     )

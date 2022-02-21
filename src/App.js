@@ -1,6 +1,6 @@
-import {Search} from "./components/Seacrh"
+import {Search} from "./components/Seacrh.jsx"
 import './App.css';
-import { Seacrhpage } from "./components/Searchpage";
+import { Seacrhpage } from "./components/Searchpage.jsx";
 import {Routes, Route} from "react-router-dom"
 function App() {
   return (
